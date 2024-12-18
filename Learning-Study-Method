@@ -1,0 +1,25 @@
+import pandas as pd
+
+# Data for the full HR Learning & Development Preparation Plan
+columns = ["Week", "Day", "Topic", "Details", "Status", "Start Date", "Completion Date"]
+data = [
+    [1, "Monday", "Training Needs Analysis", "Understanding performance gaps, data collection methods, and prioritization.", "In Progress", "2024-12-18", "2024-12-18"],
+    [1, "Tuesday", "Training Needs Analysis", "Finalizing prioritization and identifying key training needs.", "In Progress", "2024-12-19", "2024-12-19"],
+    [1, "Wednesday", "Content Development", "Analyzing the target audience and setting learning objectives.", "Not Started", "2024-12-20", "2024-12-20"],
+    [1, "Thursday", "Content Development", "Selecting training methods and preparing materials.", "Not Started", "2024-12-21", "2024-12-21"],
+    [1, "Friday", "Measuring Training Effectiveness", "Studying the Kirkpatrick Model and its levels.", "Not Started", "2024-12-22", "2024-12-22"],
+    [2, "Monday", "Internal Training Strategies", "Exploring advantages of tailored internal programs.", "Not Started", "2024-12-25", "2024-12-25"],
+    [2, "Tuesday", "External Training Strategies", "Understanding external certifications and programs.", "Not Started", "2024-12-26", "2024-12-26"],
+    [2, "Wednesday", "L&D Program Design Example", "Case study: Agile transition and training design.", "Not Started", "2024-12-27", "2024-12-27"],
+    [2, "Thursday", "Revision & Application", "Reviewing all concepts and preparing for the interview.", "Not Started", "2024-12-28", "2024-12-28"],
+    [2, "Friday", "Mock Interview", "Practicing a mock interview based on prepared content.", "Not Started", "2024-12-29", "2024-12-29"]
+]
+
+# Creating the spreadsheet
+df = pd.DataFrame(data, columns=columns)
+
+# Save as Excel file
+file_path = "C:\\Users\tolga\OneDrive\Desktop\InterviewMap.xlsx"
+df.to_excel(file_path, index=False)
+
+file_path
