@@ -1,0 +1,13 @@
+import datetime
+
+def note_add():
+    date = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    note_text = input("Your note: ")
+
+    with open("mynotes.txt", "a", encoding="utf-8") as document:
+        document.write(f"{date} - {note_text}\n")
+
+    print("Note saved!")
+
+if __name__ == "__main__":
+    note_add()
